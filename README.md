@@ -1,7 +1,3 @@
-The GitHub repository [Mohana-Sree/Predict-text-Image-audio](https://github.com/Mohana-Sree/Predict-text-Image-audio) currently lacks a README file. However, based on the repository's name and the presence of `FastApi` and `Maven` directories, we can infer that it aims to implement a multimodal prediction system handling text, image, and audio inputs. The use of FastAPI suggests a Python-based web framework for building APIs, while Maven indicates Java-based project management.
-
----
-
 ## Project Overview
 
 **Predict-text-Image-audio** is designed to process and predict outcomes based on text, image, and audio inputs. It likely integrates machine learning models to handle each modality and exposes them via a web API using FastAPI.
