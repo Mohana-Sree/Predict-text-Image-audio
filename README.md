@@ -1,99 +1,113 @@
-## Project Overview
+# Predict-text-Image-audio
 
-**Predict-text-Image-audio** is designed to process and predict outcomes based on text, image, and audio inputs. It likely integrates machine learning models to handle each modality and exposes them via a web API using FastAPI.
+A multimodal machine learning project that performs predictions based on **text**, **image**, and **audio** inputs, leveraging both **Python (FastAPI)** and **Java (Maven)** technologies.
 
 ---
 
 ## Project Structure
 
-The repository contains the following directories:
-
-* `FastApi/`: Presumably contains the Python-based FastAPI application code.
-* `Maven/`: Likely includes Java-based components managed with Maven.
-
----
-
-## Getting Started
-
-### Prerequisites
-
-* Python 3.8 or higher
-* Java 8 or higher
-* Maven
-
-### Installation
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/Mohana-Sree/Predict-text-Image-audio.git
-   cd Predict-text-Image-audio
-   ```
-
-
-
-2. **Set up the Python environment:**
-
-   ```bash
-   cd FastApi
-   pip install -r requirements.txt
-   ```
-
-
-
-3. **Run the FastAPI server:**([GitHub][1])
-
-   ```bash
-   uvicorn main:app --reload
-   ```
-
-
-
-4. **Build the Java project:**
-
-   ```bash
-   cd ../Maven
-   mvn clean install
-   ```
-
-
+```
+Predict-text-Image-audio/
+├── FastApi/       # FastAPI backend for ML model serving
+├── Maven/         # Java components, likely for audio preprocessing or backend services
+└── README.md      # Project documentation
+```
 
 ---
 
 ## Features
 
-* **Text Prediction:** Processes textual data to generate predictions.
-* **Image Prediction:** Analyzes images to produce predictive outputs.
-* **Audio Prediction:** Interprets audio inputs for prediction tasks.
-* **API Integration:** Offers endpoints for each modality via FastAPI.([GitHub][2], [GitHub][3])
+* **Text Classification** using FastAPI and NLP models.
+* **Image Recognition** powered by pre-trained computer vision models.
+* **Audio Analysis** possibly using signal processing or ML models for classification.
+* RESTful **API endpoints** for each input type.
+* Hybrid tech stack with Python and Java for modular functionality.
 
 ---
 
-## API Endpoints
+## Getting Started
 
-Assuming standard RESTful design, the API may expose endpoints such as:
+### Python Setup (FastAPI)
 
-* `POST /predict/text`
-* `POST /predict/image`
-* `POST /predict/audio`
+1. Navigate to the FastAPI directory:
 
-Each endpoint would accept the respective data type and return prediction results.
+   ```bash
+   cd FastApi
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the FastAPI server:
+
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+4. Open your browser at: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
 
-## Testing
+### Java Setup (Maven)
 
-To test the API endpoints, you can use tools like `curl` or Postman.
+1. Navigate to the Maven project:
 
-Example using `curl`:([GitHub][4])
+   ```bash
+   cd Maven
+   ```
+
+2. Build the project using Maven:
+
+   ```bash
+   mvn clean install
+   ```
+
+> You must have Java (JDK 8+) and Maven installed.
+
+---
+
+## API Endpoints (Example)
+
+### `/predict/text`
+
+**Input:** JSON with a `text` field
+**Output:** Predicted label or sentiment
+
+### `/predict/image`
+
+**Input:** Image file via `multipart/form-data`
+**Output:** Detected object/classification
+
+### `/predict/audio`
+
+**Input:** Audio file (WAV/MP3)
+**Output:** Audio classification result
+
+---
+
+## Example Request
 
 ```bash
-curl -X POST "http://localhost:8000/predict/text" -H "Content-Type: application/json" -d '{"text": "Sample input text"}'
+curl -X POST "http://localhost:8000/predict/text" \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Example input string"}'
 ```
-
-
 
 ---
 
-## Contact
-For any inquiries or feedback, please contact Mohana-Sree.
+## Technologies Used
+
+* **FastAPI** – API backend for ML endpoints
+* **TensorFlow / PyTorch** – Deep learning models (assumed)
+* **OpenCV / PIL** – Image preprocessing (assumed)
+* **Librosa / Pydub** – Audio processing (assumed)
+* **Maven** – Java project build tool
+
+---
+
+## 🙌 Author
+
+Developed by [Mohana Sree](https://github.com/Mohana-Sree)
