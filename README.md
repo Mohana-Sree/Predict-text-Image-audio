@@ -108,6 +108,6 @@ curl -X POST "http://localhost:8000/predict/text" \
 
 ---
 
-## 🙌 Author
+## Author
 
 Developed by [Mohana Sree](https://github.com/Mohana-Sree)
